@@ -4,21 +4,619 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CareBridge</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f8faf9;
+            color: #183236;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            height: 75px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #183236;
+        }
+
+        .logo span {
+            color: #2a9d8f;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #183236;
+            font-size: 14px;
+        }
+
+        .login-btn {
+            border: 1px solid #2a9d8f;
+            background: white;
+            color: #238b8b;
+            padding: 11px 22px;
+            border-radius: 12px;
+        }
+
+        .signup-btn {
+            border: none;
+            background: #2a9d8f;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 12px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 470px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 7%;
+            background: linear-gradient(120deg, #f8faf9, #eaf7f4);
+        }
+
+        .hero-text {
+            max-width: 550px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.08;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #2a9d8f;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #65777b;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .primary-btn {
+            background: #2a9d8f;
+            color: white;
+            border: none;
+            padding: 15px 28px;
+            border-radius: 14px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .secondary-btn {
+            background: white;
+            color: #24545a;
+            border: 1px solid #2a9d8f;
+            padding: 15px 28px;
+            border-radius: 14px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .hero-image {
+            font-size: 170px;
+            padding: 30px;
+        }
+
+        /* SERVICES */
+
+        .services {
+            padding: 50px 6%;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .services > p {
+            color: #718187;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 22px;
+            padding: 28px 18px;
+            min-height: 250px;
+            border: 1px solid #e5eeee;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.09);
+        }
+
+        .icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #e1f4ef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 20px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #718187;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .explore {
+            background: white;
+            border: 1px solid #2a9d8f;
+            color: #238b8b;
+            padding: 9px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .emergency .icon {
+            background: #fff0ef;
+        }
+
+        .emergency h3 {
+            color: #d85c57;
+        }
+
+        .emergency .explore {
+            border-color: #e76f68;
+            color: #d85c57;
+        }
+
+        /* TRUST SECTION */
+
+        .trust {
+            margin: 10px 6% 50px;
+            padding: 28px;
+            border-radius: 25px;
+            background: #eaf7f4;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-item .small-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .trust-item h4 {
+            margin-bottom: 6px;
+        }
+
+        .trust-item p {
+            color: #718187;
+            font-size: 13px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #147c78;
+            color: white;
+            padding: 45px 7% 25px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        footer h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: #d7eeee;
+            line-height: 1.6;
+        }
+
+        footer a {
+            display: block;
+            color: #d7eeee;
+            text-decoration: none;
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 35px;
+            padding-top: 20px;
+            color: #d7eeee;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .nav-links a {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 45px 20px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .hero-image {
+                font-size: 90px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .trust {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            nav {
+                padding: 0 18px;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            .login-btn,
+            .signup-btn {
+                padding: 9px 13px;
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .cards {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .card {
+                min-height: 220px;
+                padding: 20px 12px;
+            }
+
+            .card h3 {
+                font-size: 15px;
+            }
+
+            .card p {
+                font-size: 11px;
+            }
+
+            .trust {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>CareBridge</h1>
+    <!-- NAVBAR -->
 
-    <h2>What do you need today?</h2>
+    <nav>
 
-    <div>
-        <button> Accessibility</button>
-        <button> Elderly Care</button>
-        <button>Emergency Help</button>
-        <button>Find a Doctor</button>
-        <button> Bed Availability</button>
-    </div>
+        <div class="logo">
+            Care<span>Bridge</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#">Doctors</a>
+            <a href="#">Hospitals</a>
+            <a href="#">About</a>
+        </div>
+
+        <div>
+            <button class="login-btn">Log In</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Care. Connect.
+                <br>
+                <span>We Bridge.</span>
+            </h1>
+
+            <p>
+                CareBridge connects you with healthcare,
+                assistance and accessible services whenever
+                you need them.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn">
+                    Get Started →
+                </button>
+
+                <button class="secondary-btn">
+                    Learn More
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            🧑‍🦽
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="services" id="services">
+
+        <h2>How can we help you?</h2>
+
+        <p>
+            Choose the service you need.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">♿</div>
+
+                <h3>Accessibility</h3>
+
+                <p>
+                    Find wheelchair-friendly
+                    healthcare facilities.
+                </p>
+
+                <button class="explore">
+                    Explore →
+                </button>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">👵</div>
+
+                <h3>Elderly Care</h3>
+
+                <p>
+                    Find services and support
+                    for elderly people.
+                </p>
+
+                <button class="explore">
+                    Explore →
+                </button>
+
+            </div>
+
+
+            <div class="card emergency">
+
+                <div class="icon">🚨</div>
+
+                <h3>Emergency Help</h3>
+
+                <p>
+                    Get urgent healthcare
+                    assistance when needed.
+                </p>
+
+                <button class="explore">
+                    Get Help →
+                </button>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">👨‍⚕️</div>
+
+                <h3>Find a Doctor</h3>
+
+                <p>
+                    Find doctors by specialty
+                    and availability.
+                </p>
+
+                <button class="explore">
+                    Explore →
+                </button>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🛏️</div>
+
+                <h3>Bed Availability</h3>
+
+                <p>
+                    Check available hospital
+                    beds and facilities.
+                </p>
+
+                <button class="explore">
+                    Explore →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRUST -->
+
+    <section class="trust">
+
+        <div class="trust-item">
+            <div class="small-icon">🛡️</div>
+            <h4>Trusted & Secure</h4>
+            <p>Your information is protected.</p>
+        </div>
+
+        <div class="trust-item">
+            <div class="small-icon">🕐</div>
+            <h4>24/7 Support</h4>
+            <p>Help whenever you need it.</p>
+        </div>
+
+        <div class="trust-item">
+            <div class="small-icon">📍</div>
+            <h4>Near You</h4>
+            <p>Find nearby healthcare services.</p>
+        </div>
+
+        <div class="trust-item">
+            <div class="small-icon">❤️</div>
+            <h4>For Everyone</h4>
+            <p>Accessible and inclusive care.</p>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>CareBridge</h3>
+
+                <p>
+                    Bridging care to where
+                    you need it most.
+                </p>
+            </div>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="#">Home</a>
+                <a href="#services">Services</a>
+                <a href="#">Doctors</a>
+                <a href="#">Hospitals</a>
+
+            </div>
+
+            <div>
+
+                <h3>Connect With Us</h3>
+
+                <p>Facebook · Instagram · Email</p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 CareBridge. All rights reserved.
+        </div>
+
+    </footer>
 
 </body>
 </html>
