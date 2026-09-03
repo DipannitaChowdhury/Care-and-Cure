@@ -73,6 +73,7 @@ nav{
     border-radius:10px;
 }
 
+
 /* HERO */
 
 .hero{
@@ -95,8 +96,8 @@ nav{
 }
 
 .hero h1{
-    font-size:58px;
-    line-height:1.08;
+    font-size:42px;
+    line-height:1.15;
     margin-bottom:20px;
 }
 
@@ -145,6 +146,7 @@ nav{
     font-size:150px;
 }
 
+
 /* SERVICES */
 
 .services{
@@ -164,7 +166,7 @@ nav{
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
+    grid-template-columns:repeat(4,1fr);
     gap:18px;
 }
 
@@ -215,6 +217,7 @@ nav{
     border-radius:10px;
 }
 
+
 /* EMERGENCY */
 
 .emergency{
@@ -234,6 +237,7 @@ nav{
     background:#fff0ef;
     color:#d85c57;
 }
+
 
 /* TRUST */
 
@@ -261,6 +265,7 @@ nav{
     color:#718187;
     font-size:13px;
 }
+
 
 /* FOOTER */
 
@@ -302,6 +307,7 @@ footer a{
     color:#d9eeee;
 }
 
+
 /* MOBILE */
 
 @media(max-width:900px){
@@ -317,7 +323,7 @@ footer a{
     }
 
     .hero h1{
-        font-size:42px;
+        font-size:38px;
     }
 
     .hero-art{
@@ -339,10 +345,15 @@ footer a{
     }
 }
 
+
 @media(max-width:500px){
 
     nav{
         padding:0 18px;
+    }
+
+    .nav-links{
+        display:none;
     }
 
     .nav-buttons .login{
@@ -354,7 +365,7 @@ footer a{
     }
 
     .hero h1{
-        font-size:36px;
+        font-size:34px;
     }
 
     .hero p{
@@ -368,6 +379,10 @@ footer a{
 
     .services{
         padding:50px 18px;
+    }
+
+    .services h2{
+        font-size:28px;
     }
 
     .cards{
@@ -398,7 +413,9 @@ footer a{
 </style>
 </head>
 
+
 <body>
+
 
 <!-- NAVBAR -->
 
@@ -424,6 +441,7 @@ footer a{
 </nav>
 
 
+
 <!-- HERO -->
 
 <section class="hero">
@@ -435,9 +453,8 @@ footer a{
         </div>
 
         <h1>
-            CARE
-            <span> AND CURE </span>
-            Care That Reaches You.
+            Care That
+            <span>Reaches You.</span>
         </h1>
 
         <p>
@@ -460,11 +477,13 @@ footer a{
 
     </div>
 
+
     <div class="hero-art">
         🧑‍🦽
     </div>
 
 </section>
+
 
 
 <!-- SERVICES -->
@@ -477,7 +496,11 @@ footer a{
         Choose the care or assistance you need.
     </p>
 
+
     <div class="cards">
+
+
+        <!-- ACCESSIBILITY -->
 
         <div class="card">
 
@@ -486,8 +509,8 @@ footer a{
             <h3>Accessibility</h3>
 
             <p>
-                Find healthcare places with
-                accessible facilities.
+                Find wheelchair-friendly places,
+                ramps and accessible facilities.
             </p>
 
             <button class="explore">
@@ -496,6 +519,135 @@ footer a{
 
         </div>
 
+
+
+        <!-- AMBULANCE -->
+
+        <div class="card emergency">
+
+            <div class="icon">🚑</div>
+
+            <h3>Ambulance</h3>
+
+            <p>
+                Find nearby ambulance services
+                when urgent help is needed.
+            </p>
+
+            <button class="explore">
+                Get Help →
+            </button>
+
+        </div>
+
+
+
+        <!-- EMERGENCY -->
+
+        <div class="card emergency">
+
+            <div class="icon">🆘</div>
+
+            <h3>Emergency Help</h3>
+
+            <p>
+                Get quick assistance during
+                unexpected health emergencies.
+            </p>
+
+            <button class="explore">
+                Get Help →
+            </button>
+
+        </div>
+
+
+
+        <!-- MEDICINE -->
+
+        <div class="card">
+
+            <div class="icon">💊</div>
+
+            <h3>Medicine Reminder</h3>
+
+            <p>
+                Keep track of medicines and
+                never miss an important dose.
+            </p>
+
+            <button class="explore">
+                Explore →
+            </button>
+
+        </div>
+
+
+
+        <!-- BLOOD -->
+
+        <div class="card">
+
+            <div class="icon">🩸</div>
+
+            <h3>Blood Help</h3>
+
+            <p>
+                Find blood donors and get
+                help when blood is urgently needed.
+            </p>
+
+            <button class="explore">
+                Find Help →
+            </button>
+
+        </div>
+
+
+
+        <!-- HOME CARE -->
+
+        <div class="card">
+
+            <div class="icon">🏠</div>
+
+            <h3>Home Care</h3>
+
+            <p>
+                Get healthcare assistance and
+                support from the comfort of home.
+            </p>
+
+            <button class="explore">
+                Explore →
+            </button>
+
+        </div>
+
+
+
+        <!-- WELLNESS -->
+
+        <div class="card">
+
+            <div class="icon">🧠</div>
+
+            <h3>Wellness</h3>
+
+            <p>
+                Simple wellness guidance for
+                a healthier everyday life.
+            </p>
+
+            <button class="explore">
+                Explore →
+            </button>
+
+        </div>
+
+
+
+        <!-- ELDERLY CARE -->
 
         <div class="card">
 
@@ -514,63 +666,10 @@ footer a{
 
         </div>
 
-
-        <div class="card emergency">
-
-            <div class="icon">🚨</div>
-
-            <h3>Emergency Help</h3>
-
-            <p>
-                Request urgent healthcare
-                assistance when needed.
-            </p>
-
-            <button class="explore">
-                Get Help →
-            </button>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">👨‍⚕️</div>
-
-            <h3>Find a Doctor</h3>
-
-            <p>
-                Find doctors by specialty
-                and availability.
-            </p>
-
-            <button class="explore">
-                Explore →
-            </button>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">🛏️</div>
-
-            <h3>Bed Availability</h3>
-
-            <p>
-                Check available beds and
-                hospital facilities.
-            </p>
-
-            <button class="explore">
-                Explore →
-            </button>
-
-        </div>
-
     </div>
 
 </section>
+
 
 
 <!-- TRUST -->
@@ -578,30 +677,58 @@ footer a{
 <section class="trust">
 
     <div>
+
         <div class="trust-icon">🛡️</div>
+
         <h4>Safe & Secure</h4>
-        <p>Your information stays protected.</p>
+
+        <p>
+            Your information stays protected.
+        </p>
+
     </div>
 
+
     <div>
+
         <div class="trust-icon">🕐</div>
+
         <h4>Available When Needed</h4>
-        <p>Healthcare assistance made easier.</p>
+
+        <p>
+            Healthcare assistance made easier.
+        </p>
+
     </div>
 
+
     <div>
+
         <div class="trust-icon">📍</div>
+
         <h4>Find Nearby Care</h4>
-        <p>Discover useful healthcare options.</p>
+
+        <p>
+            Discover useful healthcare options.
+        </p>
+
     </div>
 
+
     <div>
+
         <div class="trust-icon">❤️</div>
+
         <h4>Care For Everyone</h4>
-        <p>Designed with accessibility in mind.</p>
+
+        <p>
+            Designed with accessibility in mind.
+        </p>
+
     </div>
 
 </section>
+
 
 
 <!-- FOOTER -->
@@ -610,7 +737,9 @@ footer a{
 
     <div class="footer-content">
 
+
         <div>
+
             <h3>Care and Cure</h3>
 
             <p>
@@ -618,35 +747,59 @@ footer a{
                 Connecting people with the
                 healthcare and assistance they need.
             </p>
+
         </div>
+
+
 
         <div>
 
             <h3>Quick Links</h3>
 
             <a href="#">Home</a>
-            <a href="#services">Services</a>
-            <a href="#">Doctors</a>
-            <a href="#">Hospitals</a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#">
+                Doctors
+            </a>
+
+            <a href="#">
+                Hospitals
+            </a>
 
         </div>
+
+
 
         <div>
 
             <h3>Contact</h3>
 
-            <p>Email: careandcure@gmail.com</p>
-            <p>Phone: +880 1974840000</p>
+            <p>
+                Email: careandcure@example.com
+            </p>
+
+            <p>
+                Phone: +880 1XXXXXXXXX
+            </p>
 
         </div>
 
     </div>
 
+
     <div class="copyright">
-        © 2026 Care and Cure. All rights reserved.
+
+        © 2026 Care and Cure.
+        All rights reserved.
+
     </div>
 
 </footer>
+
 
 </body>
 </html>
