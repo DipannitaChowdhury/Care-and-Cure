@@ -5,7 +5,7 @@ session_start();
 $message = "";
 $message_type = "";
 
-$conn = mysqli_connect("localhost", "root", "", "care_and_cure");
+$conn = mysqli_connect("localhost", "root", "", "care and cure");
 
 if (!$conn) {
     die("Database connection failed: " . mysqli_connect_error());
