@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Care and Cure</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -22,16 +24,19 @@ body{
     color:#183638;
 }
 
+/* NAVBAR */
+
 nav{
     position:fixed;
     top:0;
+    left:0;
     width:100%;
-    height:70px;
+    height:72px;
     padding:0 7%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:white;
+    background:rgba(255,255,255,.97);
     border-bottom:1px solid #e2efec;
     z-index:1000;
 }
@@ -40,22 +45,35 @@ nav{
     font-size:25px;
     font-weight:bold;
     color:#147c78;
+    animation:logoMotion 4s ease-in-out infinite;
 }
 
 .logo span{
     color:#2a9d8f;
 }
 
+@keyframes logoMotion{
+    0%,100%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    50%{
+        transform:translateY(-3px);
+        opacity:.85;
+    }
+}
+
 .nav-links{
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:22px;
 }
 
 .nav-links a{
     text-decoration:none;
     color:#52676a;
     font-size:14px;
+    transition:.3s;
 }
 
 .nav-links a:hover{
@@ -64,22 +82,26 @@ nav{
 
 .login-btn{
     background:#2a9d8f;
-    color:white!important;
-    padding:10px 20px;
+    color:white !important;
+    padding:10px 21px;
     border-radius:25px;
 }
 
+
+/* HERO */
+
 .hero{
     min-height:100vh;
-    padding:120px 7% 70px;
+    padding:125px 7% 70px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:50px;
+    gap:60px;
 }
 
 .hero-text{
     max-width:600px;
+    animation:fadeUp 1s ease;
 }
 
 .small-title{
@@ -91,7 +113,7 @@ nav{
 }
 
 .hero h1{
-    font-size:58px;
+    font-size:60px;
     line-height:1.05;
     margin-bottom:22px;
 }
@@ -119,6 +141,7 @@ nav{
     border-radius:13px;
     font-weight:bold;
     font-size:14px;
+    transition:.3s;
 }
 
 .primary{
@@ -131,6 +154,14 @@ nav{
     color:#147c78;
     border:1px solid #cfe5e1;
 }
+
+.primary:hover,
+.secondary:hover{
+    transform:translateY(-4px);
+}
+
+
+/* HERO VISUAL */
 
 .hero-visual{
     width:390px;
@@ -146,6 +177,7 @@ nav{
     left:20px;
     border:1px dashed #9bd3ca;
     border-radius:50%;
+    animation:rotate 22s linear infinite;
 }
 
 .main-card{
@@ -169,6 +201,7 @@ nav{
     align-items:center;
     font-size:28px;
     margin-bottom:18px;
+    animation:pulse 2.5s infinite;
 }
 
 .main-card h3{
@@ -190,6 +223,7 @@ nav{
     box-shadow:0 10px 25px rgba(20,124,120,.12);
     font-size:12px;
     font-weight:bold;
+    animation:float 4s ease-in-out infinite;
 }
 
 .card-one{
@@ -200,12 +234,17 @@ nav{
 .card-two{
     bottom:55px;
     left:-15px;
+    animation-delay:1s;
 }
 
 .card-three{
     bottom:20px;
     right:15px;
+    animation-delay:2s;
 }
+
+
+/* SECTION */
 
 .section{
     padding:90px 7%;
@@ -228,6 +267,9 @@ nav{
     line-height:1.8;
 }
 
+
+/* USERS */
+
 .user-boxes{
     max-width:1000px;
     margin:auto;
@@ -241,6 +283,11 @@ nav{
     padding:30px;
     border-radius:24px;
     box-shadow:0 10px 30px rgba(20,124,120,.07);
+    transition:.3s;
+}
+
+.user-box:hover{
+    transform:translateY(-6px);
 }
 
 .user-icon{
@@ -259,6 +306,9 @@ nav{
     line-height:1.8;
 }
 
+
+/* FEATURES */
+
 .features{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -274,11 +324,12 @@ nav{
     border-radius:20px;
     border:1px solid #e5f0ee;
     box-shadow:0 7px 25px rgba(20,124,120,.05);
-    transition:.3s;
+    transition:.35s;
 }
 
 .feature:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
+    box-shadow:0 18px 38px rgba(20,124,120,.13);
 }
 
 .feature-icon{
@@ -304,6 +355,92 @@ nav{
     line-height:1.7;
 }
 
+
+/* ACCOUNT */
+
+.support{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.support-card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(20,124,120,.06);
+    transition:.3s;
+}
+
+.support-card:hover{
+    transform:translateY(-6px);
+}
+
+.support-card .icon{
+    font-size:30px;
+    margin-bottom:13px;
+}
+
+.support-card h3{
+    color:#147c78;
+    margin-bottom:8px;
+    font-size:17px;
+}
+
+.support-card p{
+    color:#718187;
+    font-size:13px;
+    line-height:1.6;
+}
+
+.support-card a{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    color:#2a9d8f;
+    font-weight:bold;
+    font-size:13px;
+}
+
+
+/* FEEDBACK */
+
+.feedback{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(20,124,120,.07);
+}
+
+.feedback h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.feedback p{
+    color:#718187;
+    font-size:14px;
+    margin-bottom:22px;
+}
+
+.feedback a{
+    display:inline-block;
+    text-decoration:none;
+    background:#2a9d8f;
+    color:white;
+    padding:13px 25px;
+    border-radius:12px;
+}
+
+
+/* TEAM */
+
 .team{
     max-width:900px;
     margin:auto;
@@ -318,6 +455,11 @@ nav{
     border-radius:24px;
     text-align:center;
     box-shadow:0 10px 30px rgba(20,124,120,.07);
+    transition:.3s;
+}
+
+.team-card:hover{
+    transform:translateY(-6px);
 }
 
 .team-photo{
@@ -357,47 +499,8 @@ nav{
     line-height:1.7;
 }
 
-.support{
-    max-width:1000px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
 
-.support-card{
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 8px 25px rgba(20,124,120,.06);
-}
-
-.support-card .icon{
-    font-size:30px;
-    margin-bottom:13px;
-}
-
-.support-card h3{
-    color:#147c78;
-    margin-bottom:8px;
-    font-size:17px;
-}
-
-.support-card p{
-    color:#718187;
-    font-size:13px;
-    line-height:1.6;
-}
-
-.support-card a{
-    display:inline-block;
-    margin-top:15px;
-    text-decoration:none;
-    color:#2a9d8f;
-    font-weight:bold;
-    font-size:13px;
-}
+/* CTA */
 
 .cta{
     margin:30px 7% 80px;
@@ -429,6 +532,9 @@ nav{
     font-weight:bold;
 }
 
+
+/* FOOTER */
+
 footer{
     background:white;
     padding:28px 7%;
@@ -442,7 +548,60 @@ footer span{
     color:#2a9d8f;
 }
 
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+@keyframes rotate{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow:0 0 0 0 rgba(42,157,143,.3);
+    }
+
+    70%{
+        box-shadow:0 0 0 15px rgba(42,157,143,0);
+    }
+
+    100%{
+        box-shadow:0 0 0 0 rgba(42,157,143,0);
+    }
+}
+
+
+/* RESPONSIVE */
+
 @media(max-width:950px){
+
     .hero{
         flex-direction:column;
         text-align:center;
@@ -458,12 +617,17 @@ footer span{
 }
 
 @media(max-width:650px){
+
     .nav-links a:not(.login-btn){
         display:none;
     }
 
     .hero h1{
         font-size:43px;
+    }
+
+    .hero-visual{
+        transform:scale(.85);
     }
 
     .features,
@@ -483,10 +647,15 @@ footer span{
         text-align:center;
     }
 }
+
 </style>
 </head>
 
+
 <body>
+
+
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -495,15 +664,23 @@ Care <span>and Cure</span>
 </div>
 
 <div class="nav-links">
+
 <a href="#services">Services</a>
+
 <a href="#features">Features</a>
+
 <a href="#team">Our Team</a>
+
 <a href="signup.php">Sign Up</a>
+
 <a href="login.php" class="login-btn">Log In</a>
+
 </div>
 
 </nav>
 
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -577,6 +754,8 @@ find the right kind of care in one connected space.
 </section>
 
 
+<!-- SERVICES -->
+
 <section class="section" id="services">
 
 <div class="section-title">
@@ -640,6 +819,8 @@ caregivers, resources and support activities.
 </section>
 
 
+<!-- FEATURES -->
+
 <section class="section" id="features">
 
 <div class="section-title">
@@ -662,121 +843,285 @@ care, emergency and accessibility needs.
 
 <div class="features">
 
+
 <a href="ambulance.php" class="feature">
-<div class="feature-icon">🚑</div>
-<h4>Smart Ambulance Request</h4>
-<p>Request ambulance support when urgent transport is needed.</p>
+
+<div class="feature-icon">
+🚑
+</div>
+
+<h4>
+Smart Ambulance Request
+</h4>
+
+<p>
+Request ambulance support when urgent transport is needed.
+</p>
+
 </a>
 
 
 <a href="emergency.php" class="feature">
-<div class="feature-icon">🆘</div>
-<h4>Emergency Help Alert</h4>
-<p>Send an alert when immediate help is needed.</p>
+
+<div class="feature-icon">
+🆘
+</div>
+
+<h4>
+Emergency Help Alert
+</h4>
+
+<p>
+Send an alert when immediate help is needed.
+</p>
+
 </a>
 
 
 <a href="blood.php" class="feature">
-<div class="feature-icon">🩸</div>
-<h4>Blood Donor Matching</h4>
-<p>Find suitable blood donors based on blood group and location.</p>
+
+<div class="feature-icon">
+🩸
+</div>
+
+<h4>
+Blood Donor Matching
+</h4>
+
+<p>
+Find suitable blood donors based on blood group and location.
+</p>
+
 </a>
 
 
 <a href="home_care.php" class="feature">
-<div class="feature-icon">🏠</div>
-<h4>Home Care</h4>
-<p>Request care and support services directly for home.</p>
+
+<div class="feature-icon">
+🏠
+</div>
+
+<h4>
+Home Care
+</h4>
+
+<p>
+Request care and support services directly for home.
+</p>
+
 </a>
 
 
 <a href="wellness.php" class="feature">
-<div class="feature-icon">🌿</div>
-<h4>Wellness Check-in</h4>
-<p>Record and monitor everyday wellness activities.</p>
+
+<div class="feature-icon">
+🌿
+</div>
+
+<h4>
+Wellness Check-in
+</h4>
+
+<p>
+Record and monitor everyday wellness activities.
+</p>
+
 </a>
 
 
 <a href="elderly_care.php" class="feature">
-<div class="feature-icon">👵</div>
-<h4>Elderly Care</h4>
-<p>Manage regular care and support needs for elderly people.</p>
+
+<div class="feature-icon">
+👵
+</div>
+
+<h4>
+Elderly Care
+</h4>
+
+<p>
+Manage regular care and support needs for elderly people.
+</p>
+
 </a>
 
 
 <a href="accessibility.php" class="feature">
-<div class="feature-icon">♿</div>
-<h4>Accessibility Profile</h4>
-<p>Save mobility and accessibility requirements for better support.</p>
+
+<div class="feature-icon">
+♿
+</div>
+
+<h4>
+Accessibility Profile
+</h4>
+
+<p>
+Save mobility and accessibility requirements for better support.
+</p>
+
 </a>
 
 
 <a href="hospital.php" class="feature">
-<div class="feature-icon">🏥</div>
-<h4>Hospital Capacity</h4>
-<p>Check available hospital beds and related services.</p>
+
+<div class="feature-icon">
+🏥
+</div>
+
+<h4>
+Hospital Capacity
+</h4>
+
+<p>
+Check available hospital beds and related services.
+</p>
+
 </a>
 
 
 <a href="doctor_help.php" class="feature">
-<div class="feature-icon">👨‍⚕️</div>
-<h4>Doctor Help Request</h4>
-<p>Request assistance from an appropriate healthcare professional.</p>
+
+<div class="feature-icon">
+👨‍⚕️
+</div>
+
+<h4>
+Doctor Help Request
+</h4>
+
+<p>
+Request assistance from an appropriate healthcare professional.
+</p>
+
 </a>
 
 
 <a href="medicine.php" class="feature">
-<div class="feature-icon">💊</div>
-<h4>Medicine & Dose Tracker</h4>
-<p>Keep track of medicines, doses and scheduled times.</p>
+
+<div class="feature-icon">
+💊
+</div>
+
+<h4>
+Medicine & Dose Tracker
+</h4>
+
+<p>
+Keep track of medicines, doses and scheduled times.
+</p>
+
 </a>
 
 
 <a href="caregiver.php" class="feature">
-<div class="feature-icon">🤝</div>
-<h4>Caregiver Matching</h4>
-<p>Find suitable caregivers based on individual care needs.</p>
+
+<div class="feature-icon">
+🤝
+</div>
+
+<h4>
+Caregiver Matching
+</h4>
+
+<p>
+Find suitable caregivers based on individual care needs.
+</p>
+
 </a>
 
 
 <a href="accessible_route.php" class="feature">
-<div class="feature-icon">🗺️</div>
-<h4>Accessible Care Route</h4>
-<p>Find routes and locations with accessibility support.</p>
+
+<div class="feature-icon">
+🗺️
+</div>
+
+<h4>
+Accessible Care Route
+</h4>
+
+<p>
+Find routes and service locations with accessibility support.
+</p>
+
 </a>
 
 
 <a href="equipment.php" class="feature">
-<div class="feature-icon">🦽</div>
-<h4>Equipment Sharing</h4>
-<p>Find and share useful healthcare and mobility equipment.</p>
+
+<div class="feature-icon">
+🦽
+</div>
+
+<h4>
+Equipment Sharing
+</h4>
+
+<p>
+Find and share useful healthcare and mobility equipment.
+</p>
+
 </a>
 
 
 <a href="care_visit.php" class="feature">
-<div class="feature-icon">📅</div>
-<h4>Care Visit Scheduler</h4>
-<p>Schedule and manage upcoming care visits easily.</p>
+
+<div class="feature-icon">
+📅
+</div>
+
+<h4>
+Care Visit Scheduler
+</h4>
+
+<p>
+Schedule and manage upcoming care visits easily.
+</p>
+
 </a>
 
 
 <a href="care_timeline.php" class="feature">
-<div class="feature-icon">📖</div>
-<h4>Personal Care Timeline</h4>
-<p>Keep important care activities and history organized.</p>
+
+<div class="feature-icon">
+📖
+</div>
+
+<h4>
+Personal Care Timeline
+</h4>
+
+<p>
+Keep important care activities and history organized.
+</p>
+
 </a>
 
 
 <a href="care_followup.php" class="feature">
-<div class="feature-icon">🔔</div>
-<h4>Care Follow-up Alert</h4>
-<p>Get reminders for important follow-ups and care activities.</p>
+
+<div class="feature-icon">
+🔔
+</div>
+
+<h4>
+Care Follow-up Alert
+</h4>
+
+<p>
+Get reminders for important follow-ups and care activities.
+</p>
+
 </a>
+
 
 </div>
 
 </section>
 
+
+<!-- ACCOUNT AND SUPPORT -->
 
 <section class="section">
 
@@ -790,16 +1135,25 @@ ACCOUNT & SUPPORT
 Everything you need in one place.
 </h2>
 
+<p>
+Manage your account and share your experience with Care and Cure.
+</p>
+
 </div>
 
 
 <div class="support">
 
+
 <div class="support-card">
 
-<div class="icon">👤</div>
+<div class="icon">
+👤
+</div>
 
-<h3>Profile</h3>
+<h3>
+Profile
+</h3>
 
 <p>
 View and manage your personal information.
@@ -814,12 +1168,16 @@ Open Profile →
 
 <div class="support-card">
 
-<div class="icon">💬</div>
+<div class="icon">
+💬
+</div>
 
-<h3>Feedback / Complaint</h3>
+<h3>
+Feedback / Complaint
+</h3>
 
 <p>
-Share your experience, suggestion or complaint.
+Share your suggestion, feedback or complaint.
 </p>
 
 <a href="feedback.php">
@@ -831,9 +1189,13 @@ Give Feedback →
 
 <div class="support-card">
 
-<div class="icon">🔐</div>
+<div class="icon">
+🔐
+</div>
 
-<h3>Login</h3>
+<h3>
+Login
+</h3>
 
 <p>
 Access your Care and Cure account.
@@ -848,9 +1210,13 @@ Login →
 
 <div class="support-card">
 
-<div class="icon">🚪</div>
+<div class="icon">
+🚪
+</div>
 
-<h3>Logout</h3>
+<h3>
+Logout
+</h3>
 
 <p>
 Securely exit your Care and Cure account.
@@ -862,10 +1228,13 @@ Logout →
 
 </div>
 
+
 </div>
 
 </section>
 
+
+<!-- TEAM AT THE END -->
 
 <section class="section" id="team">
 
@@ -939,6 +1308,32 @@ Care and Cure project team member.
 </section>
 
 
+<!-- FEEDBACK -->
+
+<section class="section">
+
+<div class="feedback">
+
+<h3>
+💬 Feedback & Complaint
+</h3>
+
+<p>
+Have a suggestion, complaint or problem with a service?
+Let us know.
+</p>
+
+<a href="feedback.php">
+Give Feedback →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
 <section class="cta">
 
 <h2>
@@ -956,6 +1351,8 @@ Create Your Account →
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
 <div>
@@ -967,6 +1364,7 @@ Care • Access • Assistance
 </div>
 
 </footer>
+
 
 </body>
 </html>
