@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Care and Cure</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -19,51 +17,30 @@ html{
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background:#f5fbf9;
     color:#183638;
-    overflow-x:hidden;
 }
-
-/* ================= NAVBAR ================= */
 
 nav{
     position:fixed;
     top:0;
-    left:0;
     width:100%;
-    height:78px;
+    height:75px;
     padding:0 7%;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    background:rgba(255,255,255,.88);
-    backdrop-filter:blur(15px);
+    align-items:center;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(12px);
     z-index:1000;
-    border-bottom:1px solid rgba(42,157,143,.08);
+    border-bottom:1px solid #e3efed;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:9px;
     font-size:25px;
-    font-weight:700;
+    font-weight:bold;
     color:#147c78;
-    animation:logoEnter 1s ease;
-}
-
-.logo-mark{
-    width:35px;
-    height:35px;
-    border-radius:12px;
-    background:#2a9d8f;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:18px;
-    box-shadow:0 8px 20px rgba(42,157,143,.22);
 }
 
 .logo span{
@@ -73,7 +50,7 @@ nav{
 .nav-links{
     display:flex;
     align-items:center;
-    gap:28px;
+    gap:22px;
 }
 
 .nav-links a{
@@ -88,73 +65,38 @@ nav{
 }
 
 .login-btn{
-    padding:11px 22px;
-    border-radius:25px;
     background:#2a9d8f;
-    color:white !important;
-    box-shadow:0 8px 20px rgba(42,157,143,.18);
+    color:white!important;
+    padding:11px 21px;
+    border-radius:25px;
 }
-
-.login-btn:hover{
-    transform:translateY(-2px);
-}
-
-/* ================= HERO ================= */
 
 .hero{
     min-height:100vh;
-    padding:145px 7% 80px;
+    padding:130px 7% 70px;
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:60px;
-    position:relative;
-}
-
-.hero:before{
-    content:"";
-    position:absolute;
-    width:420px;
-    height:420px;
-    border-radius:50%;
-    background:rgba(42,157,143,.07);
-    right:-150px;
-    top:120px;
-    animation:float 7s ease-in-out infinite;
-}
-
-.hero:after{
-    content:"";
-    position:absolute;
-    width:170px;
-    height:170px;
-    border-radius:50%;
-    border:1px solid rgba(42,157,143,.15);
-    left:-70px;
-    bottom:100px;
-    animation:rotate 15s linear infinite;
 }
 
 .hero-text{
-    max-width:610px;
-    position:relative;
-    z-index:2;
-    animation:heroText 1s ease;
+    max-width:600px;
+    animation:up 1s ease;
 }
 
 .small-title{
     color:#2a9d8f;
-    font-size:11px;
+    font-size:12px;
     font-weight:bold;
     letter-spacing:3px;
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
 .hero h1{
     font-size:62px;
     line-height:1.05;
-    letter-spacing:-2px;
-    margin-bottom:24px;
+    margin-bottom:22px;
 }
 
 .hero h1 span{
@@ -162,92 +104,71 @@ nav{
 }
 
 .hero p{
-    color:#687b7e;
+    color:#6d7d80;
     font-size:16px;
-    line-height:1.9;
-    max-width:540px;
+    line-height:1.8;
 }
 
 .hero-buttons{
     display:flex;
     gap:15px;
-    margin-top:34px;
+    margin-top:30px;
 }
 
-.primary,
-.secondary{
+.primary,.secondary{
     text-decoration:none;
     padding:15px 25px;
     border-radius:13px;
-    font-size:14px;
     font-weight:bold;
+    font-size:14px;
     transition:.3s;
 }
 
 .primary{
     background:#2a9d8f;
     color:white;
-    box-shadow:0 12px 25px rgba(42,157,143,.2);
-}
-
-.primary:hover{
-    transform:translateY(-4px);
-    box-shadow:0 18px 30px rgba(42,157,143,.25);
 }
 
 .secondary{
-    border:1px solid #c9e4df;
-    color:#238b8b;
     background:white;
+    color:#147c78;
+    border:1px solid #cce5e0;
 }
 
-.secondary:hover{
+.primary:hover,.secondary:hover{
     transform:translateY(-4px);
 }
 
-/* ================= HERO VISUAL ================= */
-
 .hero-visual{
     width:390px;
-    height:440px;
+    height:390px;
     position:relative;
-    z-index:2;
-    animation:visualEnter 1.2s ease;
+    animation:scale .9s ease;
 }
 
-.orbit{
+.circle{
     position:absolute;
-    inset:25px;
-    border:1px dashed rgba(42,157,143,.25);
+    width:350px;
+    height:350px;
+    border:1px dashed #9ed5cc;
     border-radius:50%;
+    top:20px;
+    left:20px;
     animation:rotate 18s linear infinite;
 }
 
-.orbit:before{
-    content:"";
+.main-card{
     position:absolute;
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    background:#2a9d8f;
-    top:15px;
-    left:55px;
-    box-shadow:0 0 0 8px rgba(42,157,143,.1);
-}
-
-.care-card{
-    position:absolute;
-    width:290px;
     background:white;
-    padding:28px;
-    border-radius:27px;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    box-shadow:0 25px 60px rgba(20,124,120,.14);
+    width:280px;
+    padding:30px;
+    border-radius:28px;
+    left:55px;
+    top:70px;
+    box-shadow:0 20px 50px rgba(20,124,120,.12);
 }
 
-.pulse{
+.main-icon{
     width:60px;
     height:60px;
     border-radius:20px;
@@ -255,126 +176,98 @@ nav{
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:27px;
-    margin-bottom:20px;
-    animation:pulse 2.2s infinite;
+    font-size:28px;
+    margin-bottom:18px;
+    animation:pulse 2s infinite;
 }
 
-.care-card h3{
+.main-card h3{
     font-size:22px;
     margin-bottom:10px;
 }
 
-.care-card p{
-    color:#77878a;
+.main-card p{
+    color:#718187;
     font-size:13px;
     line-height:1.7;
 }
 
-.mini-card{
+.float-card{
     position:absolute;
     background:white;
-    padding:13px 17px;
+    padding:13px 18px;
     border-radius:15px;
-    box-shadow:0 12px 30px rgba(20,124,120,.1);
+    box-shadow:0 10px 25px rgba(20,124,120,.1);
     font-size:12px;
     font-weight:bold;
-    color:#38565a;
     animation:float 4s ease-in-out infinite;
 }
 
-.mini-one{
-    top:55px;
-    right:-5px;
+.card-one{
+    top:35px;
+    right:-10px;
 }
 
-.mini-two{
-    bottom:60px;
+.card-two{
+    bottom:55px;
     left:-15px;
     animation-delay:1s;
 }
 
-.mini-three{
+.card-three{
     bottom:20px;
-    right:25px;
+    right:15px;
     animation-delay:2s;
 }
 
-/* ================= SECTION ================= */
-
 .section{
-    padding:100px 7%;
+    padding:90px 7%;
 }
 
 .section-title{
     text-align:center;
     max-width:650px;
-    margin:0 auto 55px;
+    margin:0 auto 50px;
 }
 
 .section-title h2{
     font-size:38px;
-    margin-bottom:14px;
+    margin-bottom:13px;
 }
 
 .section-title p{
     color:#718187;
-    line-height:1.8;
     font-size:14px;
+    line-height:1.8;
 }
 
-/* ================= USERS ================= */
-
 .user-boxes{
+    max-width:1000px;
+    margin:auto;
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:25px;
-    max-width:1000px;
-    margin:auto;
 }
 
 .user-box{
     background:white;
-    border-radius:25px;
-    padding:32px;
-    position:relative;
-    overflow:hidden;
-    box-shadow:0 12px 35px rgba(20,124,120,.07);
+    padding:30px;
+    border-radius:24px;
+    box-shadow:0 10px 30px rgba(20,124,120,.07);
     transition:.4s;
-}
-
-.user-box:before{
-    content:"";
-    position:absolute;
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    background:#eaf8f5;
-    right:-45px;
-    top:-45px;
 }
 
 .user-box:hover{
     transform:translateY(-7px);
-    box-shadow:0 20px 45px rgba(20,124,120,.12);
 }
 
 .user-icon{
-    width:52px;
-    height:52px;
-    border-radius:17px;
-    background:#e5f6f2;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:24px;
-    margin-bottom:20px;
-    position:relative;
+    font-size:28px;
+    margin-bottom:15px;
 }
 
 .user-box h3{
     color:#147c78;
-    font-size:19px;
     margin-bottom:10px;
 }
 
@@ -384,8 +277,6 @@ nav{
     line-height:1.8;
 }
 
-/* ================= FEATURES ================= */
-
 .features{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -393,25 +284,14 @@ nav{
 }
 
 .feature{
+    display:block;
+    text-decoration:none;
+    color:inherit;
     background:white;
-    padding:25px;
+    padding:24px;
     border-radius:20px;
-    box-shadow:0 8px 28px rgba(20,124,120,.06);
-    position:relative;
-    overflow:hidden;
-    transition:.4s;
-    animation:fadeUp .8s ease both;
-}
-
-.feature:after{
-    content:"";
-    position:absolute;
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    background:#edf9f6;
-    right:-25px;
-    bottom:-25px;
+    border:1px solid #e5f0ee;
+    box-shadow:0 7px 25px rgba(20,124,120,.05);
     transition:.4s;
 }
 
@@ -420,92 +300,176 @@ nav{
     box-shadow:0 18px 38px rgba(20,124,120,.12);
 }
 
-.feature:hover:after{
-    transform:scale(1.8);
-}
-
 .feature-icon{
-    width:48px;
-    height:48px;
+    width:50px;
+    height:50px;
     border-radius:15px;
-    background:#e8f7f3;
+    background:#e7f7f3;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:22px;
+    font-size:23px;
     margin-bottom:17px;
-    position:relative;
-    z-index:2;
-    transition:.4s;
-}
-
-.feature:hover .feature-icon{
-    transform:rotate(-5deg) scale(1.08);
 }
 
 .feature h4{
     font-size:15px;
-    margin-bottom:8px;
-    position:relative;
-    z-index:2;
+    margin-bottom:9px;
 }
 
 .feature p{
-    color:#77878a;
+    color:#718187;
     font-size:12px;
     line-height:1.7;
-    position:relative;
-    z-index:2;
 }
 
-/* ================= CTA ================= */
+.support{
+    max-width:900px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
 
-.cta{
-    margin:40px 7% 90px;
-    padding:70px 30px;
-    border-radius:32px;
-    background:linear-gradient(135deg,#147c78,#2a9d8f);
-    color:white;
+.support-card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
     text-align:center;
-    position:relative;
+    box-shadow:0 8px 25px rgba(20,124,120,.06);
+    transition:.3s;
+}
+
+.support-card:hover{
+    transform:translateY(-6px);
+}
+
+.support-card .icon{
+    font-size:30px;
+    margin-bottom:13px;
+}
+
+.support-card h3{
+    color:#147c78;
+    margin-bottom:8px;
+    font-size:17px;
+}
+
+.support-card p{
+    color:#718187;
+    font-size:13px;
+    line-height:1.6;
+}
+
+.support-card a{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    color:#2a9d8f;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.team{
+    max-width:900px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.team-card{
+    background:white;
+    padding:30px;
+    border-radius:24px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(20,124,120,.07);
+}
+
+.team-photo{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    margin:0 auto 18px;
+    background:#e5f6f2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
     overflow:hidden;
 }
 
-.cta:before,
-.cta:after{
-    content:"";
-    position:absolute;
-    border:1px solid rgba(255,255,255,.18);
-    border-radius:50%;
+.team-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.cta:before{
-    width:250px;
-    height:250px;
-    left:-100px;
-    top:-120px;
+.team-card h3{
+    color:#147c78;
+    margin-bottom:7px;
 }
 
-.cta:after{
-    width:350px;
-    height:350px;
-    right:-170px;
-    bottom:-200px;
+.team-card .role{
+    color:#2a9d8f;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.team-card p{
+    color:#718187;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.feedback{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(20,124,120,.07);
+}
+
+.feedback h3{
+    margin-bottom:10px;
+}
+
+.feedback p{
+    color:#718187;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.feedback a{
+    display:inline-block;
+    text-decoration:none;
+    background:#2a9d8f;
+    color:white;
+    padding:13px 25px;
+    border-radius:12px;
+}
+
+.cta{
+    margin:30px 7% 80px;
+    padding:65px 30px;
+    border-radius:30px;
+    background:#147c78;
+    color:white;
+    text-align:center;
 }
 
 .cta h2{
-    font-size:36px;
-    margin-bottom:14px;
-    position:relative;
-    z-index:2;
+    font-size:35px;
+    margin-bottom:13px;
 }
 
 .cta p{
-    color:#e1f6f2;
-    margin-bottom:28px;
+    color:#d9f2ee;
     font-size:14px;
-    position:relative;
-    z-index:2;
+    margin-bottom:25px;
 }
 
 .cta a{
@@ -513,24 +477,14 @@ nav{
     text-decoration:none;
     background:white;
     color:#147c78;
-    padding:15px 28px;
-    border-radius:13px;
+    padding:14px 27px;
+    border-radius:12px;
     font-weight:bold;
-    font-size:14px;
-    transition:.3s;
-    position:relative;
-    z-index:2;
 }
-
-.cta a:hover{
-    transform:translateY(-4px);
-}
-
-/* ================= FOOTER ================= */
 
 footer{
-    padding:30px 7%;
     background:white;
+    padding:28px 7%;
     display:flex;
     justify-content:space-between;
     color:#718187;
@@ -538,23 +492,10 @@ footer{
 }
 
 footer span{
-    color:#238b8b;
+    color:#2a9d8f;
 }
 
-/* ================= ANIMATIONS ================= */
-
-@keyframes logoEnter{
-    from{
-        opacity:0;
-        transform:translateX(-20px);
-    }
-    to{
-        opacity:1;
-        transform:translateX(0);
-    }
-}
-
-@keyframes heroText{
+@keyframes up{
     from{
         opacity:0;
         transform:translateY(30px);
@@ -565,7 +506,7 @@ footer span{
     }
 }
 
-@keyframes visualEnter{
+@keyframes scale{
     from{
         opacity:0;
         transform:scale(.85);
@@ -581,7 +522,7 @@ footer span{
         transform:translateY(0);
     }
     50%{
-        transform:translateY(-13px);
+        transform:translateY(-12px);
     }
 }
 
@@ -606,32 +547,11 @@ footer span{
     }
 }
 
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* ================= MOBILE ================= */
-
 @media(max-width:950px){
 
     .hero{
         flex-direction:column;
         text-align:center;
-    }
-
-    .hero-text{
-        max-width:700px;
-    }
-
-    .hero p{
-        margin:auto;
     }
 
     .hero-buttons{
@@ -642,28 +562,21 @@ footer span{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .hero-visual{
-        margin-top:20px;
+    .support{
+        grid-template-columns:1fr;
     }
 
 }
 
 @media(max-width:650px){
 
-    nav{
-        padding:0 5%;
-    }
-
-    .nav-links{
-        gap:10px;
-    }
-
     .nav-links a:not(.login-btn){
         display:none;
     }
 
     .hero{
-        padding:125px 5% 60px;
+        padding-left:5%;
+        padding-right:5%;
     }
 
     .hero h1{
@@ -671,38 +584,23 @@ footer span{
     }
 
     .hero-visual{
-        width:100%;
-        max-width:390px;
-        transform:scale(.9);
+        transform:scale(.85);
     }
 
     .features{
         grid-template-columns:1fr;
     }
 
-    .user-boxes{
+    .user-boxes,
+    .team{
         grid-template-columns:1fr;
     }
 
     .section{
-        padding:75px 5%;
-    }
-
-    .section-title h2{
-        font-size:30px;
-    }
-
-    .cta{
-        margin:20px 5% 60px;
-        padding:55px 25px;
-    }
-
-    .cta h2{
-        font-size:29px;
+        padding:70px 5%;
     }
 
     footer{
-        padding:25px 5%;
         flex-direction:column;
         gap:10px;
         text-align:center;
@@ -715,36 +613,22 @@ footer span{
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
 
 <div class="logo">
-
-<div class="logo-mark">+</div>
-
 Care <span>and Cure</span>
-
 </div>
 
 <div class="nav-links">
-
 <a href="#services">Services</a>
-
 <a href="#features">Features</a>
-
+<a href="#team">Our Team</a>
 <a href="signup.php">Sign Up</a>
-
-<a href="login.php" class="login-btn">
-Log In
-</a>
-
+<a href="login.php" class="login-btn">Log In</a>
 </div>
 
 </nav>
 
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -762,8 +646,7 @@ Care that<br>
 <p>
 Care and Cure brings essential care, emergency
 support and everyday assistance closer to the
-people who need it — making care easier to find,
-understand and access.
+people who need it.
 </p>
 
 <div class="hero-buttons">
@@ -773,7 +656,7 @@ Get Started →
 </a>
 
 <a href="#features" class="secondary">
-Explore Care
+Explore Services
 </a>
 
 </div>
@@ -783,11 +666,11 @@ Explore Care
 
 <div class="hero-visual">
 
-<div class="orbit"></div>
+<div class="circle"></div>
 
-<div class="care-card">
+<div class="main-card">
 
-<div class="pulse">
+<div class="main-icon">
 ❤️
 </div>
 
@@ -796,22 +679,21 @@ Care, connected.
 </h3>
 
 <p>
-From emergency support to everyday
-wellness, find the right kind of care
-in one connected space.
+From emergency support to everyday wellness,
+find the right kind of care in one connected space.
 </p>
 
 </div>
 
-<div class="mini-card mini-one">
+<div class="float-card card-one">
 🚑 Ambulance
 </div>
 
-<div class="mini-card mini-two">
+<div class="float-card card-two">
 🩸 Blood Help
 </div>
 
-<div class="mini-card mini-three">
+<div class="float-card card-three">
 🏠 Home Care
 </div>
 
@@ -820,14 +702,12 @@ in one connected space.
 </section>
 
 
-<!-- USERS -->
-
 <section class="section" id="services">
 
 <div class="section-title">
 
 <div class="small-title">
-MADE FOR PEOPLE & CARE TEAMS
+OUR USERS
 </div>
 
 <h2>
@@ -835,9 +715,8 @@ Care works better together.
 </h2>
 
 <p>
-Two sides of the platform work together
-to make care easier to request, coordinate
-and manage.
+Our platform connects people who need care
+with people who coordinate and provide support.
 </p>
 
 </div>
@@ -847,18 +726,16 @@ and manage.
 
 <div class="user-box">
 
-<div class="user-icon">
-👤
-</div>
+<div class="user-icon">👤</div>
 
 <h3>
 Service User
 </h3>
 
 <p>
-Access emergency help, ambulance support,
-blood assistance, home care, wellness,
-elderly care and other essential services.
+A person who uses Care and Cure services
+such as emergency help, blood support,
+home care, wellness and elderly care.
 </p>
 
 </div>
@@ -866,17 +743,15 @@ elderly care and other essential services.
 
 <div class="user-box">
 
-<div class="user-icon">
-🧑‍💼
-</div>
+<div class="user-icon">🧑‍💼</div>
 
 <h3>
 Care Coordinator
 </h3>
 
 <p>
-Coordinate requests, caregivers, equipment,
-resources and service feedback from one place.
+A person who coordinates service requests,
+caregivers, resources and support activities.
 </p>
 
 </div>
@@ -885,8 +760,6 @@ resources and service feedback from one place.
 
 </section>
 
-
-<!-- FEATURES -->
 
 <section class="section" id="features">
 
@@ -901,8 +774,8 @@ CARE AND CURE
 </h2>
 
 <p>
-A collection of practical services designed
-around real-life care and support needs.
+Practical services designed around real-life
+care, emergency and accessibility needs.
 </p>
 
 </div>
@@ -910,131 +783,267 @@ around real-life care and support needs.
 
 <div class="features">
 
-
-<div class="feature">
+<a href="ambulance.php" class="feature">
 <div class="feature-icon">🚑</div>
 <h4>Smart Ambulance Request</h4>
 <p>Request ambulance support when urgent transport is needed.</p>
-</div>
+</a>
 
-
-<div class="feature">
+<a href="emergency.php" class="feature">
 <div class="feature-icon">🆘</div>
 <h4>Emergency Help Alert</h4>
-<p>Send an emergency alert to the appropriate support contacts.</p>
-</div>
+<p>Send an emergency alert when immediate help is needed.</p>
+</a>
 
-
-<div class="feature">
+<a href="blood.php" class="feature">
 <div class="feature-icon">🩸</div>
 <h4>Blood Donor Matching</h4>
 <p>Find suitable blood donors based on blood group and location.</p>
-</div>
+</a>
 
-
-<div class="feature">
+<a href="home_care.php" class="feature">
 <div class="feature-icon">🏠</div>
 <h4>Home Care</h4>
 <p>Request care and support services directly for home.</p>
-</div>
+</a>
 
-
-<div class="feature">
+<a href="wellness.php" class="feature">
 <div class="feature-icon">🌿</div>
 <h4>Wellness Check-in</h4>
 <p>Record and monitor everyday wellness activities.</p>
-</div>
+</a>
 
-
-<div class="feature">
+<a href="elderly_care.php" class="feature">
 <div class="feature-icon">👵</div>
 <h4>Elderly Care</h4>
 <p>Manage regular care and support needs for elderly people.</p>
-</div>
+</a>
 
-
-<div class="feature">
+<a href="accessibility.php" class="feature">
 <div class="feature-icon">♿</div>
 <h4>Accessibility Profile</h4>
 <p>Save mobility and accessibility requirements for better support.</p>
-</div>
+</a>
 
-
-<div class="feature">
+<a href="hospital.php" class="feature">
 <div class="feature-icon">🏥</div>
 <h4>Hospital Capacity</h4>
-<p>Check available hospital beds or seats and related services.</p>
-</div>
+<p>Check available hospital beds and related services.</p>
+</a>
 
+<a href="doctor_help.php" class="feature">
+<div class="feature-icon">👨‍⚕️</div>
+<h4>Doctor Help Request</h4>
+<p>Request assistance from an appropriate healthcare professional.</p>
+</a>
 
-<div class="feature">
-    <div class="feature-icon">👨‍⚕️</div>
-    <h4>Doctor Help Request</h4>
-    <p>Request assistance from an appropriate healthcare professional.</p>
-    <a href="doctor_help.php">Open →</a>
-</div>
-.feature {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    cursor: pointer;
-}
-
-<div class="feature">
+<a href="medicine.php" class="feature">
 <div class="feature-icon">💊</div>
 <h4>Medicine & Dose Tracker</h4>
 <p>Keep track of medicines, doses and scheduled times.</p>
-</div>
+</a>
 
-
-<div class="feature">
+<a href="caregiver.php" class="feature">
 <div class="feature-icon">🤝</div>
 <h4>Caregiver Matching</h4>
-<p>Find suitable caregiver support based on individual needs.</p>
-</div>
+<p>Find suitable caregivers based on individual care needs.</p>
+</a>
 
-
-<div class="feature">
+<a href="accessible_route.php" class="feature">
 <div class="feature-icon">🗺️</div>
 <h4>Accessible Care Route</h4>
-<p>Find routes and service locations suitable for accessibility needs.</p>
-</div>
+<p>Find routes and service locations with accessibility support.</p>
+</a>
 
-
-<div class="feature">
+<a href="equipment.php" class="feature">
 <div class="feature-icon">🦽</div>
 <h4>Equipment Sharing</h4>
-<p>Check availability and request useful assistive equipment.</p>
-</div>
+<p>Find and share useful healthcare and mobility equipment.</p>
+</a>
 
-
-<div class="feature">
+<a href="care_visit.php" class="feature">
 <div class="feature-icon">📅</div>
 <h4>Care Visit Scheduler</h4>
-<p>Organize upcoming doctor, caregiver and home-care visits.</p>
-</div>
+<p>Schedule and manage upcoming care visits easily.</p>
+</a>
 
-
-<div class="feature">
+<a href="care_timeline.php" class="feature">
 <div class="feature-icon">📖</div>
 <h4>Personal Care Timeline</h4>
-<p>Keep a chronological record of care and support activities.</p>
-</div>
+<p>Keep important care activities and history organized.</p>
+</a>
 
-
-<div class="feature">
+<a href="care_followup.php" class="feature">
 <div class="feature-icon">🔔</div>
 <h4>Care Follow-up Alert</h4>
-<p>Get reminders for pending care, follow-ups and important actions.</p>
-</div>
-
+<p>Get reminders for important follow-ups and care activities.</p>
+</a>
 
 </div>
 
 </section>
 
 
-<!-- CTA -->
+<section class="section">
+
+<div class="section-title">
+
+<div class="small-title">
+SUPPORTING FUNCTIONS
+</div>
+
+<h2>
+Everything you need in one place.
+</h2>
+
+<p>
+These functions support the main Care and Cure services.
+</p>
+
+</div>
+
+
+<div class="support">
+
+<div class="support-card">
+
+<div class="icon">👤</div>
+
+<h3>Profile</h3>
+
+<p>
+View and manage your personal information.
+</p>
+
+<a href="profile.php">
+Open Profile →
+</a>
+
+</div>
+
+
+<div class="support-card">
+
+<div class="icon">💬</div>
+
+<h3>Feedback / Complaint</h3>
+
+<p>
+Share your experience, suggestion or complaint.
+</p>
+
+<a href="feedback.php">
+Give Feedback →
+</a>
+
+</div>
+
+
+<div class="support-card">
+
+<div class="icon">🚪</div>
+
+<h3>Logout</h3>
+
+<p>
+Securely exit your Care and Cure account.
+</p>
+
+<a href="logout.php">
+Logout →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="team">
+
+<div class="section-title">
+
+<div class="small-title">
+OUR TEAM
+</div>
+
+<h2>
+The people behind Care and Cure.
+</h2>
+
+<p>
+Meet the team members who are building this project.
+</p>
+
+</div>
+
+
+<div class="team">
+
+<div class="team-card">
+
+<div class="team-photo">
+📷
+</div>
+
+<h3>Your Name</h3>
+
+<div class="role">
+Project Developer
+</div>
+
+<p>
+Your short introduction will be added here.
+</p>
+
+</div>
+
+
+<div class="team-card">
+
+<div class="team-photo">
+📷
+</div>
+
+<h3>Team Member Name</h3>
+
+<div class="role">
+Project Developer
+</div>
+
+<p>
+Your team member's short introduction will be added here.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="feedback">
+
+<h3>
+💬 Feedback & Complaint
+</h3>
+
+<p>
+Have a suggestion or problem with a service?
+Let us know.
+</p>
+
+<a href="feedback.php">
+Give Feedback →
+</a>
+
+</div>
+
+</section>
+
 
 <section class="cta">
 
@@ -1043,8 +1052,7 @@ Because care should reach you.
 </h2>
 
 <p>
-Join Care and Cure and bring essential support
-closer to everyday life.
+Join Care and Cure and bring essential support closer to everyday life.
 </p>
 
 <a href="signup.php">
@@ -1053,8 +1061,6 @@ Create Your Account →
 
 </section>
 
-
-<!-- FOOTER -->
 
 <footer>
 
