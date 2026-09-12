@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Care and Cure</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -19,7 +17,7 @@ html{
 }
 
 body{
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
     background:#f5fbf9;
     color:#183638;
 }
@@ -45,21 +43,19 @@ nav{
     font-size:25px;
     font-weight:bold;
     color:#147c78;
-    animation:logoMotion 4s ease-in-out infinite;
+    animation:careMotion 4s ease-in-out infinite;
 }
 
 .logo span{
     color:#2a9d8f;
 }
 
-@keyframes logoMotion{
+@keyframes careMotion{
     0%,100%{
         transform:translateY(0);
-        opacity:1;
     }
     50%{
-        transform:translateY(-3px);
-        opacity:.85;
+        transform:translateY(-2px);
     }
 }
 
@@ -244,7 +240,7 @@ nav{
 }
 
 
-/* SECTION */
+/* SECTIONS */
 
 .section{
     padding:90px 7%;
@@ -358,145 +354,132 @@ nav{
 
 /* ACCOUNT */
 
-.support{
-    max-width:1000px;
+.account-area{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(20,124,120,.07);
+}
+
+.account-links{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.account-link{
+    text-decoration:none;
+    color:#183638;
+    background:#f5fbf9;
+    border:1px solid #e0efec;
+    padding:22px 15px;
+    border-radius:17px;
+    text-align:center;
+    transition:.3s;
+}
+
+.account-link:hover{
+    transform:translateY(-5px);
+    border-color:#9bd3ca;
+}
+
+.account-link .icon{
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.account-link h4{
+    color:#147c78;
+    margin-bottom:6px;
+}
+
+.account-link p{
+    color:#718187;
+    font-size:12px;
+    line-height:1.6;
+}
+
+
+/* FINAL OPTIONS */
+
+.final-options{
+    max-width:850px;
     margin:auto;
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:1fr 1fr;
     gap:18px;
 }
 
-.support-card{
+.final-option{
+    text-decoration:none;
+    color:inherit;
     background:white;
     padding:25px;
     border-radius:20px;
     text-align:center;
+    border:1px solid #e5f0ee;
     box-shadow:0 8px 25px rgba(20,124,120,.06);
     transition:.3s;
 }
 
-.support-card:hover{
+.final-option:hover{
     transform:translateY(-6px);
 }
 
-.support-card .icon{
+.final-option .icon{
     font-size:30px;
-    margin-bottom:13px;
+    margin-bottom:12px;
 }
 
-.support-card h3{
+.final-option h3{
     color:#147c78;
     margin-bottom:8px;
-    font-size:17px;
 }
 
-.support-card p{
+.final-option p{
     color:#718187;
     font-size:13px;
     line-height:1.6;
 }
 
-.support-card a{
-    display:inline-block;
-    margin-top:15px;
-    text-decoration:none;
-    color:#2a9d8f;
-    font-weight:bold;
-    font-size:13px;
-}
 
+/* TEAM OPTION */
 
-/* FEEDBACK */
-
-.feedback{
+.team-option{
     max-width:850px;
     margin:auto;
-    background:white;
-    padding:40px;
-    border-radius:25px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(20,124,120,.07);
-}
-
-.feedback h3{
-    font-size:24px;
-    margin-bottom:10px;
-}
-
-.feedback p{
-    color:#718187;
-    font-size:14px;
-    margin-bottom:22px;
-}
-
-.feedback a{
-    display:inline-block;
     text-decoration:none;
-    background:#2a9d8f;
-    color:white;
-    padding:13px 25px;
-    border-radius:12px;
-}
-
-
-/* TEAM */
-
-.team{
-    max-width:900px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-}
-
-.team-card{
+    color:inherit;
+    display:block;
     background:white;
-    padding:30px;
-    border-radius:24px;
+    padding:28px;
+    border-radius:22px;
     text-align:center;
+    border:1px solid #e1eeeb;
     box-shadow:0 10px 30px rgba(20,124,120,.07);
-    transition:.3s;
+    transition:.35s;
 }
 
-.team-card:hover{
+.team-option:hover{
     transform:translateY(-6px);
+    box-shadow:0 18px 38px rgba(20,124,120,.12);
 }
 
-.team-photo{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    margin:0 auto 18px;
-    background:#e5f6f2;
-    overflow:hidden;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:38px;
+.team-option .team-icon{
+    font-size:34px;
+    margin-bottom:12px;
 }
 
-.team-photo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.team-card h3{
+.team-option h3{
     color:#147c78;
-    margin-bottom:7px;
+    margin-bottom:8px;
 }
 
-.team-card .role{
-    color:#2a9d8f;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:10px;
-}
-
-.team-card p{
+.team-option p{
     color:#718187;
     font-size:13px;
-    line-height:1.7;
 }
 
 
@@ -610,10 +593,6 @@ footer span{
     .features{
         grid-template-columns:repeat(2,1fr);
     }
-
-    .support{
-        grid-template-columns:repeat(2,1fr);
-    }
 }
 
 @media(max-width:650px){
@@ -632,8 +611,8 @@ footer span{
 
     .features,
     .user-boxes,
-    .team,
-    .support{
+    .account-links,
+    .final-options{
         grid-template-columns:1fr;
     }
 
@@ -651,7 +630,6 @@ footer span{
 </style>
 </head>
 
-
 <body>
 
 
@@ -666,13 +644,9 @@ Care <span>and Cure</span>
 <div class="nav-links">
 
 <a href="#services">Services</a>
-
 <a href="#features">Features</a>
-
-<a href="#team">Our Team</a>
-
+<a href="#account">Account</a>
 <a href="signup.php">Sign Up</a>
-
 <a href="login.php" class="login-btn">Log In</a>
 
 </div>
@@ -846,13 +820,9 @@ care, emergency and accessibility needs.
 
 <a href="ambulance.php" class="feature">
 
-<div class="feature-icon">
-🚑
-</div>
+<div class="feature-icon">🚑</div>
 
-<h4>
-Smart Ambulance Request
-</h4>
+<h4>Smart Ambulance Request</h4>
 
 <p>
 Request ambulance support when urgent transport is needed.
@@ -863,13 +833,9 @@ Request ambulance support when urgent transport is needed.
 
 <a href="emergency.php" class="feature">
 
-<div class="feature-icon">
-🆘
-</div>
+<div class="feature-icon">🆘</div>
 
-<h4>
-Emergency Help Alert
-</h4>
+<h4>Emergency Help Alert</h4>
 
 <p>
 Send an alert when immediate help is needed.
@@ -880,13 +846,9 @@ Send an alert when immediate help is needed.
 
 <a href="blood.php" class="feature">
 
-<div class="feature-icon">
-🩸
-</div>
+<div class="feature-icon">🩸</div>
 
-<h4>
-Blood Donor Matching
-</h4>
+<h4>Blood Donor Matching</h4>
 
 <p>
 Find suitable blood donors based on blood group and location.
@@ -897,13 +859,9 @@ Find suitable blood donors based on blood group and location.
 
 <a href="home_care.php" class="feature">
 
-<div class="feature-icon">
-🏠
-</div>
+<div class="feature-icon">🏠</div>
 
-<h4>
-Home Care
-</h4>
+<h4>Home Care</h4>
 
 <p>
 Request care and support services directly for home.
@@ -914,13 +872,9 @@ Request care and support services directly for home.
 
 <a href="wellness.php" class="feature">
 
-<div class="feature-icon">
-🌿
-</div>
+<div class="feature-icon">🌿</div>
 
-<h4>
-Wellness Check-in
-</h4>
+<h4>Wellness Check-in</h4>
 
 <p>
 Record and monitor everyday wellness activities.
@@ -931,13 +885,9 @@ Record and monitor everyday wellness activities.
 
 <a href="elderly_care.php" class="feature">
 
-<div class="feature-icon">
-👵
-</div>
+<div class="feature-icon">👵</div>
 
-<h4>
-Elderly Care
-</h4>
+<h4>Elderly Care</h4>
 
 <p>
 Manage regular care and support needs for elderly people.
@@ -948,13 +898,9 @@ Manage regular care and support needs for elderly people.
 
 <a href="accessibility.php" class="feature">
 
-<div class="feature-icon">
-♿
-</div>
+<div class="feature-icon">♿</div>
 
-<h4>
-Accessibility Profile
-</h4>
+<h4>Accessibility Profile</h4>
 
 <p>
 Save mobility and accessibility requirements for better support.
@@ -965,13 +911,9 @@ Save mobility and accessibility requirements for better support.
 
 <a href="hospital.php" class="feature">
 
-<div class="feature-icon">
-🏥
-</div>
+<div class="feature-icon">🏥</div>
 
-<h4>
-Hospital Capacity
-</h4>
+<h4>Hospital Capacity</h4>
 
 <p>
 Check available hospital beds and related services.
@@ -982,13 +924,9 @@ Check available hospital beds and related services.
 
 <a href="doctor_help.php" class="feature">
 
-<div class="feature-icon">
-👨‍⚕️
-</div>
+<div class="feature-icon">👨‍⚕️</div>
 
-<h4>
-Doctor Help Request
-</h4>
+<h4>Doctor Help Request</h4>
 
 <p>
 Request assistance from an appropriate healthcare professional.
@@ -999,13 +937,9 @@ Request assistance from an appropriate healthcare professional.
 
 <a href="medicine.php" class="feature">
 
-<div class="feature-icon">
-💊
-</div>
+<div class="feature-icon">💊</div>
 
-<h4>
-Medicine & Dose Tracker
-</h4>
+<h4>Medicine & Dose Tracker</h4>
 
 <p>
 Keep track of medicines, doses and scheduled times.
@@ -1016,13 +950,9 @@ Keep track of medicines, doses and scheduled times.
 
 <a href="caregiver.php" class="feature">
 
-<div class="feature-icon">
-🤝
-</div>
+<div class="feature-icon">🤝</div>
 
-<h4>
-Caregiver Matching
-</h4>
+<h4>Caregiver Matching</h4>
 
 <p>
 Find suitable caregivers based on individual care needs.
@@ -1033,13 +963,9 @@ Find suitable caregivers based on individual care needs.
 
 <a href="accessible_route.php" class="feature">
 
-<div class="feature-icon">
-🗺️
-</div>
+<div class="feature-icon">🗺️</div>
 
-<h4>
-Accessible Care Route
-</h4>
+<h4>Accessible Care Route</h4>
 
 <p>
 Find routes and service locations with accessibility support.
@@ -1050,13 +976,9 @@ Find routes and service locations with accessibility support.
 
 <a href="equipment.php" class="feature">
 
-<div class="feature-icon">
-🦽
-</div>
+<div class="feature-icon">🦽</div>
 
-<h4>
-Equipment Sharing
-</h4>
+<h4>Equipment Sharing</h4>
 
 <p>
 Find and share useful healthcare and mobility equipment.
@@ -1067,13 +989,9 @@ Find and share useful healthcare and mobility equipment.
 
 <a href="care_visit.php" class="feature">
 
-<div class="feature-icon">
-📅
-</div>
+<div class="feature-icon">📅</div>
 
-<h4>
-Care Visit Scheduler
-</h4>
+<h4>Care Visit Scheduler</h4>
 
 <p>
 Schedule and manage upcoming care visits easily.
@@ -1084,13 +1002,9 @@ Schedule and manage upcoming care visits easily.
 
 <a href="care_timeline.php" class="feature">
 
-<div class="feature-icon">
-📖
-</div>
+<div class="feature-icon">📖</div>
 
-<h4>
-Personal Care Timeline
-</h4>
+<h4>Personal Care Timeline</h4>
 
 <p>
 Keep important care activities and history organized.
@@ -1101,13 +1015,9 @@ Keep important care activities and history organized.
 
 <a href="care_followup.php" class="feature">
 
-<div class="feature-icon">
-🔔
-</div>
+<div class="feature-icon">🔔</div>
 
-<h4>
-Care Follow-up Alert
-</h4>
+<h4>Care Follow-up Alert</h4>
 
 <p>
 Get reminders for important follow-ups and care activities.
@@ -1121,73 +1031,99 @@ Get reminders for important follow-ups and care activities.
 </section>
 
 
-<!-- ACCOUNT AND SUPPORT -->
+<!-- ACCOUNT -->
+
+<section class="section" id="account">
+
+<div class="section-title">
+
+<div class="small-title">
+MY ACCOUNT
+</div>
+
+<h2>
+Your care, your control.
+</h2>
+
+<p>
+Manage your profile and share your experience with Care and Cure.
+</p>
+
+</div>
+
+
+<div class="account-area">
+
+<div class="account-links">
+
+
+<a href="profile.php" class="account-link">
+
+<div class="icon">👤</div>
+
+<h4>Profile</h4>
+
+<p>
+Manage your personal information.
+</p>
+
+</a>
+
+
+<a href="feedback.php" class="account-link">
+
+<div class="icon">💬</div>
+
+<h4>Feedback</h4>
+
+<p>
+Share your suggestions and experience.
+</p>
+
+</a>
+
+
+<a href="feedback.php" class="account-link">
+
+<div class="icon">📝</div>
+
+<h4>Complaint</h4>
+
+<p>
+Report a problem or service issue.
+</p>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LAST OPTIONS -->
 
 <section class="section">
 
 <div class="section-title">
 
 <div class="small-title">
-ACCOUNT & SUPPORT
+MORE
 </div>
 
 <h2>
-Everything you need in one place.
+Need something else?
 </h2>
 
-<p>
-Manage your account and share your experience with Care and Cure.
-</p>
-
 </div>
 
 
-<div class="support">
+<div class="final-options">
 
 
-<div class="support-card">
-
-<div class="icon">
-👤
-</div>
-
-<h3>
-Profile
-</h3>
-
-<p>
-View and manage your personal information.
-</p>
-
-<a href="profile.php">
-Open Profile →
-</a>
-
-</div>
-
-
-<div class="support-card">
-
-<div class="icon">
-💬
-</div>
-
-<h3>
-Feedback / Complaint
-</h3>
-
-<p>
-Share your suggestion, feedback or complaint.
-</p>
-
-<a href="feedback.php">
-Give Feedback →
-</a>
-
-</div>
-
-
-<div class="support-card">
+<a href="login.php" class="final-option">
 
 <div class="icon">
 🔐
@@ -1201,14 +1137,10 @@ Login
 Access your Care and Cure account.
 </p>
 
-<a href="login.php">
-Login →
 </a>
 
-</div>
 
-
-<div class="support-card">
+<a href="logout.php" class="final-option">
 
 <div class="icon">
 🚪
@@ -1219,14 +1151,10 @@ Logout
 </h3>
 
 <p>
-Securely exit your Care and Cure account.
+Securely exit your account.
 </p>
 
-<a href="logout.php">
-Logout →
 </a>
-
-</div>
 
 
 </div>
@@ -1234,105 +1162,43 @@ Logout →
 </section>
 
 
-<!-- TEAM AT THE END -->
+<!-- TEAM OPTION AT VERY END -->
 
-<section class="section" id="team">
+<section class="section">
 
 <div class="section-title">
 
 <div class="small-title">
-OUR TEAM
+PROJECT
 </div>
 
 <h2>
-The people behind Care and Cure.
+Meet the people behind Care and Cure.
 </h2>
 
-<p>
-Meet the team members who are building this project.
-</p>
-
 </div>
 
 
-<div class="team">
+<a href="team.php" class="team-option">
 
-
-<div class="team-card">
-
-<div class="team-photo">
-
-<img src="dipannita.jpg" alt="Dipannita Chowdhury">
-
+<div class="team-icon">
+👥
 </div>
 
 <h3>
-Dipannita Chowdhury
-</h3>
-
-<div class="role">
-Project Developer
-</div>
-
-<p>
-CSE student and one of the developers behind
-the Care and Cure project.
-</p>
-
-</div>
-
-
-<div class="team-card">
-
-<div class="team-photo">
-📷
-</div>
-
-<h3>
-Team Member
-</h3>
-
-<div class="role">
-Project Developer
-</div>
-
-<p>
-Care and Cure project team member.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- FEEDBACK -->
-
-<section class="section">
-
-<div class="feedback">
-
-<h3>
-💬 Feedback & Complaint
+Our Team
 </h3>
 
 <p>
-Have a suggestion, complaint or problem with a service?
-Let us know.
+Click here to view the team members and their roles.
 </p>
 
-<a href="feedback.php">
-Give Feedback →
 </a>
 
-</div>
-
 </section>
 
 
-<!-- FINAL CTA -->
+<!-- CTA -->
 
 <section class="cta">
 
