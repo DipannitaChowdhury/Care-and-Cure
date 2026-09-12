@@ -26,15 +26,14 @@ nav{
     position:fixed;
     top:0;
     width:100%;
-    height:75px;
+    height:70px;
     padding:0 7%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(255,255,255,.95);
-    backdrop-filter:blur(12px);
+    background:white;
+    border-bottom:1px solid #e2efec;
     z-index:1000;
-    border-bottom:1px solid #e3efed;
 }
 
 .logo{
@@ -50,14 +49,13 @@ nav{
 .nav-links{
     display:flex;
     align-items:center;
-    gap:22px;
+    gap:20px;
 }
 
 .nav-links a{
     text-decoration:none;
     color:#52676a;
     font-size:14px;
-    transition:.3s;
 }
 
 .nav-links a:hover{
@@ -67,22 +65,21 @@ nav{
 .login-btn{
     background:#2a9d8f;
     color:white!important;
-    padding:11px 21px;
+    padding:10px 20px;
     border-radius:25px;
 }
 
 .hero{
     min-height:100vh;
-    padding:130px 7% 70px;
+    padding:120px 7% 70px;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:60px;
+    align-items:center;
+    gap:50px;
 }
 
 .hero-text{
     max-width:600px;
-    animation:up 1s ease;
 }
 
 .small-title{
@@ -94,7 +91,7 @@ nav{
 }
 
 .hero h1{
-    font-size:62px;
+    font-size:58px;
     line-height:1.05;
     margin-bottom:22px;
 }
@@ -104,7 +101,7 @@ nav{
 }
 
 .hero p{
-    color:#6d7d80;
+    color:#718187;
     font-size:16px;
     line-height:1.8;
 }
@@ -115,13 +112,13 @@ nav{
     margin-top:30px;
 }
 
-.primary,.secondary{
+.primary,
+.secondary{
     text-decoration:none;
-    padding:15px 25px;
+    padding:14px 24px;
     border-radius:13px;
     font-weight:bold;
     font-size:14px;
-    transition:.3s;
 }
 
 .primary{
@@ -132,39 +129,33 @@ nav{
 .secondary{
     background:white;
     color:#147c78;
-    border:1px solid #cce5e0;
-}
-
-.primary:hover,.secondary:hover{
-    transform:translateY(-4px);
+    border:1px solid #cfe5e1;
 }
 
 .hero-visual{
     width:390px;
     height:390px;
     position:relative;
-    animation:scale .9s ease;
 }
 
 .circle{
     position:absolute;
     width:350px;
     height:350px;
-    border:1px dashed #9ed5cc;
-    border-radius:50%;
     top:20px;
     left:20px;
-    animation:rotate 18s linear infinite;
+    border:1px dashed #9bd3ca;
+    border-radius:50%;
 }
 
 .main-card{
     position:absolute;
-    background:white;
+    top:70px;
+    left:55px;
     width:280px;
     padding:30px;
+    background:white;
     border-radius:28px;
-    left:55px;
-    top:70px;
     box-shadow:0 20px 50px rgba(20,124,120,.12);
 }
 
@@ -172,13 +163,12 @@ nav{
     width:60px;
     height:60px;
     border-radius:20px;
-    background:#e3f5f1;
+    background:#e2f5f1;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     font-size:28px;
     margin-bottom:18px;
-    animation:pulse 2s infinite;
 }
 
 .main-card h3{
@@ -197,27 +187,24 @@ nav{
     background:white;
     padding:13px 18px;
     border-radius:15px;
-    box-shadow:0 10px 25px rgba(20,124,120,.1);
+    box-shadow:0 10px 25px rgba(20,124,120,.12);
     font-size:12px;
     font-weight:bold;
-    animation:float 4s ease-in-out infinite;
 }
 
 .card-one{
     top:35px;
-    right:-10px;
+    right:-5px;
 }
 
 .card-two{
     bottom:55px;
     left:-15px;
-    animation-delay:1s;
 }
 
 .card-three{
     bottom:20px;
     right:15px;
-    animation-delay:2s;
 }
 
 .section{
@@ -226,7 +213,7 @@ nav{
 
 .section-title{
     text-align:center;
-    max-width:650px;
+    max-width:680px;
     margin:0 auto 50px;
 }
 
@@ -254,11 +241,6 @@ nav{
     padding:30px;
     border-radius:24px;
     box-shadow:0 10px 30px rgba(20,124,120,.07);
-    transition:.4s;
-}
-
-.user-box:hover{
-    transform:translateY(-7px);
 }
 
 .user-icon{
@@ -292,12 +274,11 @@ nav{
     border-radius:20px;
     border:1px solid #e5f0ee;
     box-shadow:0 7px 25px rgba(20,124,120,.05);
-    transition:.4s;
+    transition:.3s;
 }
 
 .feature:hover{
-    transform:translateY(-8px);
-    box-shadow:0 18px 38px rgba(20,124,120,.12);
+    transform:translateY(-5px);
 }
 
 .feature-icon{
@@ -306,8 +287,8 @@ nav{
     border-radius:15px;
     background:#e7f7f3;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     font-size:23px;
     margin-bottom:17px;
 }
@@ -321,53 +302,6 @@ nav{
     color:#718187;
     font-size:12px;
     line-height:1.7;
-}
-
-.support{
-    max-width:900px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.support-card{
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 8px 25px rgba(20,124,120,.06);
-    transition:.3s;
-}
-
-.support-card:hover{
-    transform:translateY(-6px);
-}
-
-.support-card .icon{
-    font-size:30px;
-    margin-bottom:13px;
-}
-
-.support-card h3{
-    color:#147c78;
-    margin-bottom:8px;
-    font-size:17px;
-}
-
-.support-card p{
-    color:#718187;
-    font-size:13px;
-    line-height:1.6;
-}
-
-.support-card a{
-    display:inline-block;
-    margin-top:15px;
-    text-decoration:none;
-    color:#2a9d8f;
-    font-weight:bold;
-    font-size:13px;
 }
 
 .team{
@@ -387,16 +321,16 @@ nav{
 }
 
 .team-photo{
-    width:110px;
-    height:110px;
+    width:120px;
+    height:120px;
     border-radius:50%;
     margin:0 auto 18px;
     background:#e5f6f2;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:40px;
     overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:38px;
 }
 
 .team-photo img{
@@ -423,33 +357,46 @@ nav{
     line-height:1.7;
 }
 
-.feedback{
-    max-width:800px;
+.support{
+    max-width:1000px;
     margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.support-card{
     background:white;
-    padding:35px;
-    border-radius:25px;
+    padding:25px;
+    border-radius:20px;
     text-align:center;
-    box-shadow:0 10px 30px rgba(20,124,120,.07);
+    box-shadow:0 8px 25px rgba(20,124,120,.06);
 }
 
-.feedback h3{
-    margin-bottom:10px;
+.support-card .icon{
+    font-size:30px;
+    margin-bottom:13px;
 }
 
-.feedback p{
+.support-card h3{
+    color:#147c78;
+    margin-bottom:8px;
+    font-size:17px;
+}
+
+.support-card p{
     color:#718187;
-    font-size:14px;
-    margin-bottom:20px;
+    font-size:13px;
+    line-height:1.6;
 }
 
-.feedback a{
+.support-card a{
     display:inline-block;
+    margin-top:15px;
     text-decoration:none;
-    background:#2a9d8f;
-    color:white;
-    padding:13px 25px;
-    border-radius:12px;
+    color:#2a9d8f;
+    font-weight:bold;
+    font-size:13px;
 }
 
 .cta{
@@ -495,67 +442,10 @@ footer span{
     color:#2a9d8f;
 }
 
-@keyframes up{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-@keyframes scale{
-    from{
-        opacity:0;
-        transform:scale(.85);
-    }
-    to{
-        opacity:1;
-        transform:scale(1);
-    }
-}
-
-@keyframes float{
-    0%,100%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-12px);
-    }
-}
-
-@keyframes rotate{
-    from{
-        transform:rotate(0deg);
-    }
-    to{
-        transform:rotate(360deg);
-    }
-}
-
-@keyframes pulse{
-    0%{
-        box-shadow:0 0 0 0 rgba(42,157,143,.3);
-    }
-    70%{
-        box-shadow:0 0 0 15px rgba(42,157,143,0);
-    }
-    100%{
-        box-shadow:0 0 0 0 rgba(42,157,143,0);
-    }
-}
-
 @media(max-width:950px){
-
     .hero{
         flex-direction:column;
         text-align:center;
-    }
-
-    .hero-buttons{
-        justify-content:center;
     }
 
     .features{
@@ -563,36 +453,23 @@ footer span{
     }
 
     .support{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
     }
-
 }
 
 @media(max-width:650px){
-
     .nav-links a:not(.login-btn){
         display:none;
-    }
-
-    .hero{
-        padding-left:5%;
-        padding-right:5%;
     }
 
     .hero h1{
         font-size:43px;
     }
 
-    .hero-visual{
-        transform:scale(.85);
-    }
-
-    .features{
-        grid-template-columns:1fr;
-    }
-
+    .features,
     .user-boxes,
-    .team{
+    .team,
+    .support{
         grid-template-columns:1fr;
     }
 
@@ -605,9 +482,7 @@ footer span{
         gap:10px;
         text-align:center;
     }
-
 }
-
 </style>
 </head>
 
@@ -726,16 +601,18 @@ with people who coordinate and provide support.
 
 <div class="user-box">
 
-<div class="user-icon">👤</div>
+<div class="user-icon">
+👤
+</div>
 
 <h3>
-Service User
+Patient / Service User
 </h3>
 
 <p>
-A person who uses Care and Cure services
-such as emergency help, blood support,
-home care, wellness and elderly care.
+A person who uses Care and Cure services such as
+emergency help, blood support, home care,
+wellness and elderly care.
 </p>
 
 </div>
@@ -743,10 +620,12 @@ home care, wellness and elderly care.
 
 <div class="user-box">
 
-<div class="user-icon">🧑‍💼</div>
+<div class="user-icon">
+🧑‍💼
+</div>
 
 <h3>
-Care Coordinator
+Care Coordinator / Admin
 </h3>
 
 <p>
@@ -789,11 +668,13 @@ care, emergency and accessibility needs.
 <p>Request ambulance support when urgent transport is needed.</p>
 </a>
 
+
 <a href="emergency.php" class="feature">
 <div class="feature-icon">🆘</div>
 <h4>Emergency Help Alert</h4>
-<p>Send an emergency alert when immediate help is needed.</p>
+<p>Send an alert when immediate help is needed.</p>
 </a>
+
 
 <a href="blood.php" class="feature">
 <div class="feature-icon">🩸</div>
@@ -801,11 +682,13 @@ care, emergency and accessibility needs.
 <p>Find suitable blood donors based on blood group and location.</p>
 </a>
 
+
 <a href="home_care.php" class="feature">
 <div class="feature-icon">🏠</div>
 <h4>Home Care</h4>
 <p>Request care and support services directly for home.</p>
 </a>
+
 
 <a href="wellness.php" class="feature">
 <div class="feature-icon">🌿</div>
@@ -813,11 +696,13 @@ care, emergency and accessibility needs.
 <p>Record and monitor everyday wellness activities.</p>
 </a>
 
+
 <a href="elderly_care.php" class="feature">
 <div class="feature-icon">👵</div>
 <h4>Elderly Care</h4>
 <p>Manage regular care and support needs for elderly people.</p>
 </a>
+
 
 <a href="accessibility.php" class="feature">
 <div class="feature-icon">♿</div>
@@ -825,11 +710,13 @@ care, emergency and accessibility needs.
 <p>Save mobility and accessibility requirements for better support.</p>
 </a>
 
+
 <a href="hospital.php" class="feature">
 <div class="feature-icon">🏥</div>
 <h4>Hospital Capacity</h4>
 <p>Check available hospital beds and related services.</p>
 </a>
+
 
 <a href="doctor_help.php" class="feature">
 <div class="feature-icon">👨‍⚕️</div>
@@ -837,11 +724,13 @@ care, emergency and accessibility needs.
 <p>Request assistance from an appropriate healthcare professional.</p>
 </a>
 
+
 <a href="medicine.php" class="feature">
 <div class="feature-icon">💊</div>
 <h4>Medicine & Dose Tracker</h4>
 <p>Keep track of medicines, doses and scheduled times.</p>
 </a>
+
 
 <a href="caregiver.php" class="feature">
 <div class="feature-icon">🤝</div>
@@ -849,11 +738,13 @@ care, emergency and accessibility needs.
 <p>Find suitable caregivers based on individual care needs.</p>
 </a>
 
+
 <a href="accessible_route.php" class="feature">
 <div class="feature-icon">🗺️</div>
 <h4>Accessible Care Route</h4>
-<p>Find routes and service locations with accessibility support.</p>
+<p>Find routes and locations with accessibility support.</p>
 </a>
+
 
 <a href="equipment.php" class="feature">
 <div class="feature-icon">🦽</div>
@@ -861,17 +752,20 @@ care, emergency and accessibility needs.
 <p>Find and share useful healthcare and mobility equipment.</p>
 </a>
 
+
 <a href="care_visit.php" class="feature">
 <div class="feature-icon">📅</div>
 <h4>Care Visit Scheduler</h4>
 <p>Schedule and manage upcoming care visits easily.</p>
 </a>
 
+
 <a href="care_timeline.php" class="feature">
 <div class="feature-icon">📖</div>
 <h4>Personal Care Timeline</h4>
 <p>Keep important care activities and history organized.</p>
 </a>
+
 
 <a href="care_followup.php" class="feature">
 <div class="feature-icon">🔔</div>
@@ -889,16 +783,12 @@ care, emergency and accessibility needs.
 <div class="section-title">
 
 <div class="small-title">
-SUPPORTING FUNCTIONS
+ACCOUNT & SUPPORT
 </div>
 
 <h2>
 Everything you need in one place.
 </h2>
-
-<p>
-These functions support the main Care and Cure services.
-</p>
 
 </div>
 
@@ -934,6 +824,23 @@ Share your experience, suggestion or complaint.
 
 <a href="feedback.php">
 Give Feedback →
+</a>
+
+</div>
+
+
+<div class="support-card">
+
+<div class="icon">🔐</div>
+
+<h3>Login</h3>
+
+<p>
+Access your Care and Cure account.
+</p>
+
+<a href="login.php">
+Login →
 </a>
 
 </div>
@@ -981,64 +888,51 @@ Meet the team members who are building this project.
 
 <div class="team">
 
-<div class="team-card">
-
-<div class="team-photo">
-📷
-</div>
-
-<h3>Your Name</h3>
-
-<div class="role">
-Project Developer
-</div>
-
-<p>
-Your short introduction will be added here.
-</p>
-
-</div>
-
 
 <div class="team-card">
 
 <div class="team-photo">
-📷
-</div>
 
-<h3>Team Member Name</h3>
-
-<div class="role">
-Project Developer
-</div>
-
-<p>
-Your team member's short introduction will be added here.
-</p>
+<img src="dipannita.jpg" alt="Dipannita Chowdhury">
 
 </div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<div class="feedback">
 
 <h3>
-💬 Feedback & Complaint
+Dipannita Chowdhury
 </h3>
 
+<div class="role">
+Project Developer
+</div>
+
 <p>
-Have a suggestion or problem with a service?
-Let us know.
+CSE student and one of the developers behind
+the Care and Cure project.
 </p>
 
-<a href="feedback.php">
-Give Feedback →
-</a>
+</div>
+
+
+<div class="team-card">
+
+<div class="team-photo">
+📷
+</div>
+
+<h3>
+Team Member
+</h3>
+
+<div class="role">
+Project Developer
+</div>
+
+<p>
+Care and Cure project team member.
+</p>
+
+</div>
+
 
 </div>
 
